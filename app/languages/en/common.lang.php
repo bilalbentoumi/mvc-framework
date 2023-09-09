@@ -1,0 +1,30 @@
+<?php
+
+return [
+    'str_dashboard'                 => 'Dashboard',
+    'str_users'                     => 'Users',
+    'str_roles_and_permissions'     => 'Roles & Permissions',
+    'str_roles'                     => 'Roles',
+    'str_permissions'               => 'Permissions',
+    'str_categories'                => 'Categories',
+    'str_ads'                       => 'Ads',
+    'str_control_panel'             => 'Control Panel',
+    'str_settings'                  => 'Settings',
+    'str_logout'                    => 'Logout',
+    'str_profile'                   => 'Profile',
+    'str_status'                    => 'Status',
+    'str_email'                     => 'Email',
+    'str_create_date'               => 'Create Date',
+    'str_last_update'               => 'Last Update',
+    'str_actions'                   => 'Actions',
+    'str_active'                    => 'Active',
+    'str_inactive'                  => 'Inactive',
+    'str_edit'                      => 'Edit',
+    'str_delete'                    => 'Delete',
+    'str_create'                    => 'Create',
+    'str_update'                    => 'Update',
+    'str_save'                      => 'Save',
+    'str_yes'                       => 'Yes',
+    'str_no'                        => 'No',
+    'str_home'                      => 'Home'
+];
