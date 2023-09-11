@@ -119,7 +119,7 @@ $(document).ready(function() {
     /* Add Text Field */
     $(document).on('click', '.add-field.textfield', function(){
         var id = $('input[name="field_id"]').val();
-        $.post('http://localhost/mvc/categories/textfield', {id: id}, function(data, status){
+        $.post('/categories/textfield', {id: id}, function(data, status){
             if (data) {
                 if ($('.cat-fields').hasClass('no-fields')) {
                     $('.cat-fields').html(data);
@@ -135,7 +135,7 @@ $(document).ready(function() {
     /* Add Numeric Field */
     $(document).on('click', '.add-field.numericfield', function(){
         var id = $('input[name="field_id"]').val();
-        $.post('http://localhost/mvc/categories/numericfield', {id: id}, function(data, status){
+        $.post('/categories/numericfield', {id: id}, function(data, status){
             if (data) {
                 if ($('.cat-fields').hasClass('no-fields')) {
                     $('.cat-fields').html(data);
@@ -151,7 +151,7 @@ $(document).ready(function() {
     /* Add Select Field */
     $(document).on('click', '.add-field.selectfield', function(){
         var id = $('input[name="field_id"]').val();
-        $.post('http://localhost/mvc/categories/selectfield', {id: id}, function(data, status){
+        $.post('/categories/selectfield', {id: id}, function(data, status){
             if (data) {
                 if ($('.cat-fields').hasClass('no-fields')) {
                     $('.cat-fields').html(data);
@@ -169,7 +169,7 @@ $(document).ready(function() {
         var options = $(this);
         var pid = $(this).parent().parent().parent().parent().find('input[name="selectfield_id"]');
         var id = $(this).parent().parent().parent().parent().find('input[name="option_id"]');
-        $.post('http://localhost/mvc/categories/option', {pid: pid.val(), id: id.val()}, function(data, status){
+        $.post('/categories/option', {pid: pid.val(), id: id.val()}, function(data, status){
             if (data) {
                 options.parent().parent().parent().parent().find('.options').append(data);
                 var new_id = parseInt(id.val());
@@ -181,7 +181,7 @@ $(document).ready(function() {
     /* Add Checkbox Field */
     $(document).on('click', '.add-field.checkboxfield', function(){
         var id = $('input[name="field_id"]').val();
-        $.post('http://localhost/mvc/categories/checkboxfield', {id: id}, function(data, status){
+        $.post('/categories/checkboxfield', {id: id}, function(data, status){
             if (data) {
                 if ($('.cat-fields').hasClass('no-fields')) {
                     $('.cat-fields').html(data);
