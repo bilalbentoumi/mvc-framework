@@ -1,6 +1,6 @@
 <?php
 
-define('DBHOST', 'localhost');
-define('DBUSER', 'root');
-define('DBPASS', '123456789');
-define('DBNAME', 'classified');
+define('DBHOST', 'db');
+define('DBUSER', 'mvc');
+define('DBPASS', 'mvc');
+define('DBNAME', 'mvc');

@@ -1,0 +1,30 @@
+version: "3.0"
+
+services:
+
+  mvc_app:
+    build: ./docker
+    container_name: mvc_app
+    restart: always
+    ports:
+      - "4000:80"
+    volumes:
+      - .:/var/www/html
+      - ./docker/php/mvc.ini:/usr/local/etc/php/conf.d/mvc.ini
+    links:
+      - mvc_mysql:db
+
+  mvc_mysql:
+    image: mysql:5.7.30
+    platform: linux/x86_64
+    container_name: mvc_mysql
+    restart: always
+    ports:
+      - "4001:3306"
+    volumes:
+      - ./docker/data/mysql:/var/lib/mysql
+    environment:
+      MYSQL_USER: mvc
+      MYSQL_DATABASE: mvc
+      MYSQL_PASSWORD: mvc
+      MYSQL_ROOT_PASSWORD: mvc

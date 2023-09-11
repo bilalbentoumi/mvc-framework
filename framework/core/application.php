@@ -14,7 +14,8 @@ class Application {
     }
 
     private static function init() {
-        ini_set('date.timezone', 'Africa/Algiers');
+
+    ini_set('date.timezone', 'Africa/Algiers');
 
         define('DS', DIRECTORY_SEPARATOR);
         define('ROOT', getcwd() . DS);
@@ -66,16 +67,18 @@ class Application {
     }
 
     private static function autoload() {
-        spl_autoload_register(array(__CLASS__,'load'));
+        spl_autoload_register(array(__CLASS__, 'load'));
     }
 
     private static function load($className) {
         $className = str_replace('mvc\\', '', $className);
+        $className = str_replace('\\', '/', $className);
         $className = ROOT . $className . '.php';
-        if (!file_exists($className))
+        if (!file_exists($className)) {
             return;
+        }
 
-        require_once ($className);
+        require_once $className;
     }
 
 }
